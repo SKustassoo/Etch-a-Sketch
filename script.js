@@ -1,4 +1,4 @@
-
+let currentColor = "black"
 
 //set default draw area 16 x 16
 //populate draw area with divs
@@ -12,9 +12,13 @@ function drawTheArea(drawMesures = 16) {
         column.className = 'column';
 
         for (var j = 0; j < drawMesures; ++j) {
-            var row = document.createElement('div'); // create row
-            row.className = 'row';
-            column.appendChild(row); // append row in column
+            var rowElement = document.createElement('div'); // create row
+            rowElement.className = 'row';
+            rowElement.id = i+""+j;
+  
+            rowElement.addEventListener('click', function () {drawBox(this.id), currentColor});
+
+            column.appendChild(rowElement); // append row in column
         }
 
         grid.appendChild(column); // append column inside grid
@@ -23,12 +27,17 @@ function drawTheArea(drawMesures = 16) {
 }
 
 
+function drawBox(inputId, inputColor = "black"){
+    document.getElementById(inputId).style.backgroundColor = inputColor;
+}
 
 
 
 
 drawTheArea();
-//styleCell();
+
+
+
 
 //ask user for the draw box size: pop-up and input
 
