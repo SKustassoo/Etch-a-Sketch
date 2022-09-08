@@ -19,16 +19,15 @@
 
     <section id="main-content">
         <div class="side-area">
+
             <div class="grid-size-form">
-                <form>
-                    <div class="form-top">
-                        <label form="fname">Grid size: </label><br>
-                        <input type="text" id="grid-value" placeholder="16"><br>
-                    </div>
-                    <input type="submit" id="grid-value-input" value="Submit">
+                <form id="resize-form">
+                    Grid Size: <input type="text" id="grid-value" value="16">
+                    <input type="button" id="grid-value-input" value="Submit" onclick="resetCanvas()"/>
                 </form> 
                 <p class="subtitle">Default grid is 16 x 16</p>
             </div>
+
             <div class="colors-area">
                 <h2>Colors</h2>
                 <div class="list-of-colors">
