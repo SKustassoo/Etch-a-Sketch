@@ -23,7 +23,7 @@
             <div class="grid-size-form">
                 <form id="resize-form">
                     Grid Size: <input type="text" id="grid-value" value="16">
-                    <input type="button" id="grid-value-input" value="Submit" onclick="resetCanvas()"/>
+                    <input type="button" id="grid-value-input" value="Redraw" onclick="resetCanvas()"/>
                 </form> 
                 <p class="subtitle">Default grid is 16 x 16</p>
             </div>
@@ -31,11 +31,9 @@
             <div class="colors-area">
                 <h2>Colors</h2>
                 <div class="list-of-colors">
-                    <div class="color"></div>
-                    <div class="color"></div>
-                    <div class="color"></div>
-                    <div class="color"></div>
-                    <div class="color"></div>
+                    <div class="color green" type="button"  onclick="changeStyle('#2a9d8f')">Green</div>
+                    <div class="color eraser" type="button"  onclick="changeStyle('white')">White</div>
+                    <div class="color dark" type="button"  onclick="changeStyle('#264653')">Dark</div>
                 </div>
 
             </div>

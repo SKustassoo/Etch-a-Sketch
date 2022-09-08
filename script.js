@@ -4,11 +4,19 @@ const DEFAULT_COLOR = "black";
 let currentColor = DEFAULT_COLOR;
 let currentSize = DEFAULT_SIZE;
 
+
+let ChoiceErase = document.getElementById("eraser");
 let drawCanvas = document.getElementById("main-content");
+
 
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
+
+
+function changeStyle(change){
+    currentColor = change;  
+};
 
 
 
